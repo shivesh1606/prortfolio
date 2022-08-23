@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  /* background-color: black; */
 }
 
 a {
@@ -113,7 +114,8 @@ h6 {
 }
 
 #topbar .social-links a:hover {
-  color: #01b1d7;
+  /* color: #01b1d7; */
+  color:#d108d4;
 }
 
 #topbar .social-links a:first-child {
@@ -123,12 +125,31 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.video{
+  margin: 0;
+  position:absolute;
+  width:100%;
+  z-index: -5;
+
+
+}
+.video video{
+  width:100%;
+
+}
+
 #header {
   height: 70px;
   z-index: 997;
   transition: all 0.5s;
-  background: #fff;
-  top: 44px;
+  /* background: #fff; */
+  background-color: #00000000;
+  top: 0px;
+
+ /* position: absolute;  */
+  
+   position: sticky;
+  
 }
 
 #header.header-scrolled {
@@ -167,8 +188,14 @@ h6 {
 /**
 * Desktop Navigation 
 */
+
 .navbar {
   padding: 0;
+  
+}
+.nav_hero{
+  width:100%;
+  height:100vh;
 }
 
 .navbar ul {
@@ -192,7 +219,7 @@ h6 {
   font-family: "Raleway", sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: #404f52;
+  color: #ffffff;
   white-space: nowrap;
   text-transform: uppercase;
   transition: 0.3s;
@@ -222,7 +249,8 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background:#d108d4;
+  
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -392,11 +420,11 @@ h6 {
 #hero {
   width: 100%;
   height: 70vh;
-  background-color: rgba(31, 38, 39, 0.8);
+  /* background-color: rgba(31, 38, 39, 0); */
   overflow: hidden;
   position: relative;
-  padding: 0;
-  margin-top: 114px;
+  padding: 10px;
+ 
 }
 
 #hero .carousel-item {
@@ -410,7 +438,7 @@ h6 {
 
 #hero .carousel-item::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0); */
   position: absolute;
   top: 0;
   right: 0;
@@ -431,6 +459,7 @@ h6 {
 
 #hero .carousel-content {
   text-align: center;
+  
 }
 
 #hero h2 {
@@ -656,6 +685,62 @@ section {
   margin-bottom: 0;
 }
 
+.welcome_message{
+  margin-top: 7%;
+}
+
+hr{
+
+  border-top: 1px solid;
+  border-width: 13px;
+  border-style: dotted;
+  border-bottom: 0px;
+  width: 15%;
+  margin: 30px auto 30px auto;
+  border-color: #01b1d7;
+
+}
+
+.section-seperating-line-1{
+  border-top: 1px solid;
+  border-width: 13px;
+  border-style: dotted;
+  border-bottom: 0px;
+  width: 15%;
+  margin: 100px auto 0px auto;
+  border-color: #01b1d7;
+}
+
+.section-seperating-line-2{
+  border-top: 1px solid;
+  border-width: 13px;
+  border-style: dotted;
+  border-bottom: 0px;
+  width: 15%;
+  margin: 10px auto 30px auto;
+  border-color: #01b1d7;
+}
+
+
+/*-----------------------------------------
+About Prof
+--------------------------------------------*/
+.columns{
+  float: left;
+  width: 50%;
+  padding: 5px;
+
+}
+
+.profInfo{
+  text-align: right;
+
+}
+
+.rows{
+
+  margin-bottom: 20%;
+}
 /*--------------------------------------------------------------
 # About List
 --------------------------------------------------------------*/
