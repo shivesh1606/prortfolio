@@ -26,6 +26,15 @@
   <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Template Main CSS File -->
   <link href="static/assets/css/style.css" rel="stylesheet">
@@ -37,124 +46,129 @@
 
 
   <!-- ======= Header ======= -->
-<div class="video">
-  <video  autoplay loop muted>
-    <source src="/static/assets/video/techgirl.mp4" type="video/mp4">
-  </video>
-</div>
- 
+  <div class="video">
+    <video autoplay loop muted>
+      <source src="/static/assets/video/techgirl.mp4" type="video/mp4">
+      <!-- <source src="/static/assets/video/girlwithvr.mp4" type="video/mp4"> -->
+
+    </video>
+  </div>
+
 
   <div class="nav_hero">
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
 
-      <div class="logo">
-        <h1><a href="index.html"><span>iVAR</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
+        <div class="logo">
+          <!-- <h1><a href="index.html"><span id="ivar">iVAR</span></a></h1> -->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-        <div class="carousel-inner" role="listbox">
-
-          <!-- Slide 1 -->
-          <!-- <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg);"> -->
-          <div class="carousel-item active" >
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MyBiz</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi
-                  ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
-                  voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <!-- <div class="carousel-item" style="background-image: url(static/assets/img/slide/slide-2.jpg);"> -->
-          <div class="carousel-item" >
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi
-                  ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
-                  voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <!-- <div class="carousel-item" style="background-image: url(static/assets/img/slide/slide-3.jpg);"> -->
-            <div class="carousel-item" >
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animate__animated animate__adeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea
-                  ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
-                  voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Read More</a>
-              </div>
-            </div>
-          </div>
-
+          <div class="logoitem"><a href="index.html"><span id="ivar"><img
+                  src="/static/assets/img/arvricon2.png" /></span></a></div>
+          <div class="logoitem logotext">iVAR</div>
+          <h1></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
 
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon ri-arrow-left-line" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon ri-arrow-right-line" aria-hidden="true"></span>
-        </a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="#services">Services</a></li>
+            <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+            <li><a class="nav-link scrollto" href="#team">Team</a></li>
+            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Drop Down 1</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
 
       </div>
-    </div>
-  </section><!-- End Hero -->
-</div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div class="hero-container">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+          <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+          <div class="carousel-inner" role="listbox">
+
+            <!-- Slide 1 -->
+            <!-- <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg);"> -->
+            <div class="carousel-item active">
+              <div class="carousel-container">
+                <div class="carousel-content">
+                  <h2 class="animate__animated animate__fadeInRight">INTERACTIVE</h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <!-- <div class="carousel-item" style="background-image: url(static/assets/img/slide/slide-2.jpg);"> -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <div class="carousel-content">
+                  <h2 class="animate__animated animate__fadeInRight">VIRTUAL</h2>
+                  <!-- <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Read More</a> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <!-- <div class="carousel-item" style="background-image: url(static/assets/img/slide/slide-3.jpg);"> -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <div class="carousel-content">
+                  <h2 class="animate__animated animate__fadeInRight">AUGMENTED</h2>
+                  </div>
+              </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <div class="carousel-content">
+                  <h2 class="animate__animated animate__fadeInRight">REALITY</h2>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon ri-arrow-left-line" aria-hidden="true"></span>
+          </a>
+
+          <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon ri-arrow-right-line" aria-hidden="true"></span>
+          </a>
+
+        </div>
+      </div>
+    </section><!-- End Hero -->
+  </div>
 
 
 
-  <hr class = "section-seperating-line-1">
+  <!-- <hr class = "section-seperating-line-1"> -->
 
   <main id="main">
 
@@ -162,33 +176,36 @@
     <section id="about" class="about">
       <div class="container">
 
-        <h1 class = "welcome_message">Wlcome to iVAR.</h1>
-        <div class = "wlcome message">
-            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give 
-              you a complete account of the system, and expound the actual teachings o
-              f the great explorer of the truth, the master-
-              builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but bec
-              ause those who do not know how to pursue pleasure rationally encounter consequences
-            </p>
-        </div>
-        
-      </div>
-    </section> <!--End About Section -->
-
-    <section id = "aboutProf" class = "aboutProf" >
-      <div class="rows">
-        <div class = "profInfo columns" >
-          <p> <a href="http://ww.cetiitkgp.ac.in/prof/3">Kaushal Kumar Bhagat</a> <br>
-              <a href="mailto:kkntnu@hotmail.com">kkntnu@hotmail.com</a><br>
-              Assistant Professor <br>
-              Centre of Eeducational Technology <br>
-              Indian Institute of Technology.
+        <h1 class="welcome_message">Welcome to iVAR.</h1>
+        <div class="wlcome message">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and
+            I will give
+            you a complete account of the system, and expound the actual teachings o
+            f the great explorer of the truth, the master-
+            builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
+            because those who do not know how to pursue pleasure rationally encounter consequences
           </p>
         </div>
 
+      </div>
+    </section>
+    <!--End About Section -->
+
+    <section id="aboutProf" class="aboutProf">
+      <div class="rows">
+
+
         <div class="profPhoto columns">
 
-          <img class = "Img" src="/static/assets/img/prof Kaushal kumar bhagat.jpg" alt="Profile Picture">
+          <img class="Img" src="/static/assets/img/profkaushal.JPG" alt="Profile Picture">
+
+        </div>
+        <div class="profInfo columns">
+
+          <p><a href="http://ww.cetiitkgp.ac.in/prof/3">Prof.Kaushal Kumar Bhagat</a></p>
+          <p><a href="mailto:kkntnu@hotmail.com">kkntnu@hotmail.com</a></p>
+          <p> Assistant Professor,Centre of Educational Technology</p>
+          <p> Indian Institute of Technology,Kharagpur</p>
 
         </div>
 
@@ -196,9 +213,9 @@
       </div>
 
 
-    </section> 
-    
-    <hr class = "section-seperating-line-2">
+    </section>
+
+    <!-- <hr class = "section-seperating-line-2"> -->
 
     <!-- ======= About Section ======= 
     <section id="about" class="about">
@@ -235,7 +252,7 @@
     </section>
       End About Section -->
 
-    
+
 
     <!-- ======= About List Section ======= 
     <section id="about-list" class="about-list">
@@ -311,7 +328,7 @@
       </div>
     </section><!-- End Counts Section -->
 
-    
+
 
     <!-- ======= Portfolio Section ======= 
     <section id="portfolio" class="portfolio">
@@ -476,7 +493,7 @@
       </div>
     </section> End Portfolio Section -->
 
-   
+
     <hr>
 
     <!-- ======= Testimonials Section ======= -->
@@ -488,13 +505,13 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="static/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <!-- <img src="static/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
+                <iframe width="400" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
+                </iframe>
+
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <a href="">Video 1</a>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -502,13 +519,13 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="static/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <!-- <img src="static/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
+                <iframe width="400" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
+                </iframe>
+
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <a href="">Video 2</a>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -516,13 +533,13 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="static/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <!-- <img src="static/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
+                <iframe width="400" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
+                </iframe>
+
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <a href="">Video 3</a>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -530,27 +547,27 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="static/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <!-- <img src="static/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
+                <iframe width="400" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
+                </iframe>
+
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <a href="">Video 4</a>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-              </div>>
+              </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="static/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <!-- <img src="static/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
+                <iframe width="400" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
+                </iframe>
+
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <a href="">Video 5</a>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -647,8 +664,8 @@
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+                <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
                 <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
               </div>
             </div>
@@ -657,39 +674,22 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <!-- <i class="bx bx-chevron-right"></i>  -->
+              <li> <a href="#">Home</a></li>
+              <li> <a href="#">About us</a></li>
+              <li> <a href="#">Services</a></li>
+              <li> <a href="#">Terms of service</a></li>
+              <li> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
 
-          <!-- <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div> -->
 
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div> -->
 
         </div>
       </div>
     </div>
 
-   
+
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
