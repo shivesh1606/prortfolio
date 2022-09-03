@@ -1094,98 +1094,60 @@ width:50vw;
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team {
-  background: #fff;
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+  margin: 0 0 5% 0;
 }
-
-.team .member {
-  position: relative;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.team .member .pic {
+.members .card {
   overflow: hidden;
-  width: 180px;
-  border-radius: 50%;
+  padding: 20px;
+  background: linear-gradient(171.38deg, #F9FBFC 3.36%, #E2EAF5 95.69%);
+  box-shadow: 0px 0px 20px rgba(227, 235, 246, 0.3);
+  border-radius: 30px;
+  text-align: center;
 }
-
-.team .member .pic img {
-  transition: ease-in-out 0.3s;
+.members .card .card_img img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
-
-.team .member:hover img {
-  transform: scale(1.1);
+.team-details {
+  padding: 26px 10px 36px 10px;
 }
-
-.team .member .member-info {
-  padding-left: 30px;
+.members-name {
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #25262C;
+  font-size: 32px;
+  padding-bottom: 15px;
 }
-
-.team .member h4 {
+.designation {
   font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-  color: #354144;
+  font-size: 22px;
+  color: #959EAF;
 }
-
-.team .member span {
-  display: block;
-  font-size: 15px;
-  padding-bottom: 10px;
-  position: relative;
-  font-weight: 500;
+@media only screen and (max-width: 1024px) {
+  .members {
+      grid-template-columns: 1fr;
+      gap: 2%;
+  }
 }
-
-.team .member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: #b4c1c4;
-  bottom: 0;
-  left: 0;
+@media only screen and (max-width: 425px) {
+  .team .container {
+      padding: 0 1rem;
+  }
+  .card {
+      padding: 12px;
+  }
+  .member-name {
+      font-size: 26px;
+  }
+  .designation {
+      font-size: 18px;
+  }
 }
-
-.team .member p {
-  margin: 10px 0 0 0;
-  font-size: 14px;
-}
-
-.team .member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.team .member .social a {
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 32px;
-  height: 32px;
-  background: #c2cdcf;
-}
-
-.team .member .social a i {
-  color: #fff;
-  font-size: 16px;
-  margin: 0 2px;
-}
-
-.team .member .social a:hover {
-  background: #01b1d7;
-}
-
-.team .member .social a+a {
-  margin-left: 8px;
-}
-
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
