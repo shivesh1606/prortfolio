@@ -141,7 +141,7 @@ h6 {
 }
 
 #header {
-  height: 51px;
+  height: 71px;
   z-index: 997;
   transition: all 0.5s;
   /* background: #fff; */
@@ -174,7 +174,8 @@ h6 {
 }
 #header .logo .logotext{
    color: white;
-   font-size: small;
+   font-size: 21px;
+   margin: -10px 0 0 0;
 }
 
 #header .logo h1 a,
@@ -240,7 +241,7 @@ h6 {
   /* font-family: 'Playfair Display', serif;*/
   font-family: 'Roboto', sans-serif;
    
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   color: #ffffff;
   white-space: nowrap;
