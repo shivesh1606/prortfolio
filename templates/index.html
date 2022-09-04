@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+{% load static%}
+{% load hitcount_tags %}
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Project</title>
+  <title>Project  {{count}}</title>
+
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -73,7 +76,7 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto active" href="">HOME</a></li>
-            <li><a class="nav-link scrollto" href="team/">TEAM</a></li>
+            <li><a class="nav-link scrollto" href="{%url 'team_page'%}">TEAM</a></li>
             <li><a class="nav-link scrollto" href="#services">EQUIPMENT</a></li>
             <li class="dropdown"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
@@ -84,10 +87,10 @@
                 <li><a href="#">EDITORIAL BOARD</a></li>
               </ul>
             </li>
-            <li><a class="nav-link" href="#portfolio">PUBLICATIONS</a></li>
+            <li><a class="nav-link" href="{%url 'publication_page'%}">PUBLICATIONS</a></li>
             <li><a class="nav-link" href="#team">AWARDS</a></li>
             <li><a class="nav-link" href="#contact">MEDIA</a></li>
-            <li><a class="nav-link" href="contact/">JOIN US</a></li>
+            <li><a class="nav-link" href="{%url 'contact_page'%}">JOIN US</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -648,7 +651,7 @@
   </main><!-- End #main -->
   <div class="visitor">
     <p>Visitors</p>
-    <p class="viscount">25</p>
+    <p class="viscount">{{count}}</p>
   </div>
 
   <!-- ======= Footer ======= -->
