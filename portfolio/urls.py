@@ -25,4 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name="home_page"),
     path('team/',views.team,name="team_page"),
+    path('publication/',views.publication,name="publication_page"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
