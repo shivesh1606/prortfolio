@@ -31,7 +31,7 @@ def home (request):
     obj.order_by('date')
     for project in obj:
 
-        if project.associated_contact.all()[0]:
+        if len(project.associated_contact.all()) != 0:
             associated_contacts.append(project.associated_contact.all()[0])
         
     print(associated_contacts)
@@ -67,7 +67,7 @@ def publication (request):
     obj.order_by('date')
     for project in obj:
 
-        if project.associated_contact.all()[0]:
+        if len(project.associated_contact.all()) != 0:
             associated_contacts.append(project.associated_contact.all()[0])
         
     print(associated_contacts)
