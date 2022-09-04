@@ -614,6 +614,16 @@ h6 {
     height: 150vh;
   }
 }
+#hero .lineundercarousel{
+  /* position: absolute; */
+  display: block;
+
+  margin: auto;
+  color:white;
+  width:auto;
+  text-align: center;
+  
+}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -1153,7 +1163,8 @@ width:50vw;
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  /* background: url("../img/manwithar.jpg") no-repeat; */
+  background: url("../img/boywithvr.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1346,6 +1357,39 @@ width:50vw;
     display: inline-block;
   }
 }
+
+.visitor{
+  position: fixed;
+  /* position: sticky; */
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:space-evenly;
+  border:1.2px solid white;
+  border-radius: 10px 0px 10px 0px;
+  padding:10px 5px;
+  margin-left:5px;
+  left:0px;
+  bottom:10px;
+  background-color: #0203038f;
+  color: #e5f7ffcf;
+  width:100px;
+  box-shadow: #0187a4;
+  transition-duration:0.3s;
+  
+  cursor:pointer;
+
+}
+.visitor p{
+ margin: 0;
+ padding: 0;
+}
+.visitor:hover{
+  background-color: #020303;
+  color: #16b1f3fb;
+  width:110px;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
