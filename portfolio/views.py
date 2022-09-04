@@ -7,3 +7,9 @@ def home (request):
 
 def dashboard(request):
     return render(request,'dashboard.html')
+
+def contact(request):
+    return render(request,'contact.html')
+
+def team(request):
+    return render(request,'team.html')

@@ -141,7 +141,7 @@ h6 {
 }
 
 #header {
-  height: 51px;
+  height: 71px;
   z-index: 997;
   transition: all 0.5s;
   /* background: #fff; */
@@ -174,7 +174,8 @@ h6 {
 }
 #header .logo .logotext{
    color: white;
-   font-size: small;
+   font-size: 21px;
+   margin: -10px 0 0 0;
 }
 
 #header .logo h1 a,
@@ -240,7 +241,7 @@ h6 {
   /* font-family: 'Playfair Display', serif;*/
   font-family: 'Roboto', sans-serif;
    
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   color: #ffffff;
   white-space: nowrap;
@@ -1093,98 +1094,60 @@ width:50vw;
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team {
-  background: #fff;
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+  margin: 0 0 5% 0;
 }
-
-.team .member {
-  position: relative;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.team .member .pic {
+.members .card {
   overflow: hidden;
-  width: 180px;
-  border-radius: 50%;
+  padding: 20px;
+  background: linear-gradient(171.38deg, #F9FBFC 3.36%, #E2EAF5 95.69%);
+  box-shadow: 0px 0px 20px rgba(227, 235, 246, 0.3);
+  border-radius: 30px;
+  text-align: center;
 }
-
-.team .member .pic img {
-  transition: ease-in-out 0.3s;
+.members .card .card_img img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
-
-.team .member:hover img {
-  transform: scale(1.1);
+.team-details {
+  padding: 26px 10px 36px 10px;
 }
-
-.team .member .member-info {
-  padding-left: 30px;
+.members-name {
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #25262C;
+  font-size: 32px;
+  padding-bottom: 15px;
 }
-
-.team .member h4 {
+.designation {
   font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-  color: #354144;
+  font-size: 22px;
+  color: #959EAF;
 }
-
-.team .member span {
-  display: block;
-  font-size: 15px;
-  padding-bottom: 10px;
-  position: relative;
-  font-weight: 500;
+@media only screen and (max-width: 1024px) {
+  .members {
+      grid-template-columns: 1fr;
+      gap: 2%;
+  }
 }
-
-.team .member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: #b4c1c4;
-  bottom: 0;
-  left: 0;
+@media only screen and (max-width: 425px) {
+  .team .container {
+      padding: 0 1rem;
+  }
+  .card {
+      padding: 12px;
+  }
+  .member-name {
+      font-size: 26px;
+  }
+  .designation {
+      font-size: 18px;
+  }
 }
-
-.team .member p {
-  margin: 10px 0 0 0;
-  font-size: 14px;
-}
-
-.team .member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.team .member .social a {
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 32px;
-  height: 32px;
-  background: #c2cdcf;
-}
-
-.team .member .social a i {
-  color: #fff;
-  font-size: 16px;
-  margin: 0 2px;
-}
-
-.team .member .social a:hover {
-  background: #01b1d7;
-}
-
-.team .member .social a+a {
-  margin-left: 8px;
-}
-
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
@@ -1297,147 +1260,45 @@ width:50vw;
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-wrap {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+.contact-form {
+  padding: 50px;
+  margin: 30px 0;
 }
-
-.contact .info {
-  background: #fff;
+.contact-form h1 {
+  color: #02839f;
+  font-weight: bold;
+  margin: 0 0 15px;
 }
-
-.contact .info i {
-  font-size: 24px;
-  color: #01b1d7;
-  float: left;
-  width: 48px;
-  height: 48px;
-  background: #e2faff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+.contact-form .form-control, .contact-form .btn {
+  min-height: 38px;
+  border-radius: 2px;
 }
-
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #354144;
+.contact-form .form-control:focus {
+  border-color: #01b1d7;
 }
-
-.contact .info p {
-  padding: 0 0 0 60px;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #62787d;
-}
-
-.contact .info:hover i {
+.contact-form .btn-primary {
+  color: #fff;
+  min-width: 150px;
+  font-size: 16px;
   background: #01b1d7;
-  color: #fff;
+  border: none;
 }
-
-.contact .php-email-form {
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-  padding: 30px;
-  background: #fff;
+.contact-form .btn-primary:hover {
+  background: #01b1d7; 
 }
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
+.contact-form .btn i {
+  margin-right: 5px;
 }
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
+.contact-form label {
+  opacity: 0.7;
 }
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
+.contact-form textarea {
+  resize: vertical;
 }
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #01b1d7;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #0dd3fe;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.hint-text {
+  font-size: 15px;
+  padding-bottom: 20px;
+  opacity: 0.6;
 }
 
 /*--------------------------------------------------------------
