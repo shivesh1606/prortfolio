@@ -47,4 +47,15 @@ class IpModel(models.Model):
 
     def __str__(self):
         return self.ip
+
+class Contact_form(models.Model):
+    name=models.CharField(max_length=250, null=True,blank=True)
+    email=models.EmailField(max_length=3000)
+    subject=models.CharField(max_length=3000)
+    affilation=models.CharField(max_length=3000)
+    message=models.TextField()
+
+    def __str__(self):
+        return self.name + " - " + self.email
+    
     

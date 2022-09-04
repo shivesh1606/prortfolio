@@ -65,7 +65,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link" href="{% url 'home_page' %}" >HOME</a></li>
-          <li><a class="nav-link active" href="team/">TEAM</a></li>
+          <li><a class="nav-link active" href="{%url 'team_page'%}">TEAM</a></li>
           <li><a class="nav-link" href="#services">EQUIPMENT</a></li>
           <li class="dropdown"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -76,10 +76,10 @@
               <li><a href="#">EDITORIAL BOARD</a></li>
             </ul>
           </li>
-          <li><a class="nav-link" href="#portfolio">PUBLICATIONS</a></li>
+          <li><a class="nav-link" href="{%url 'publication_page'%}">PUBLICATIONS</a></li>
           <li><a class="nav-link" href="#team">AWARDS</a></li>
           <li><a class="nav-link" href="#contact">MEDIA</a></li>
-          <li><a class="nav-link" href="contact/">JOIN US</a></li>
+          <li><a class="nav-link" href="{%url 'contact_page'%}">JOIN US</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

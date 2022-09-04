@@ -62,8 +62,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="">HOME</a></li>
-          <li><a class="nav-link scrollto" href="team/">TEAM</a></li>
+          <li><a class="nav-link scrollto" href="{%url 'home_page'%}">HOME</a></li>
+          <li><a class="nav-link scrollto" href="{%url 'team_page'%}">TEAM</a></li>
           <li><a class="nav-link scrollto" href="#services">EQUIPMENT</a></li>
           <li class="dropdown"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -74,10 +74,10 @@
               <li><a href="#">EDITORIAL BOARD</a></li>
             </ul>
           </li>
-          <li><a class="nav-link" href="#portfolio">PUBLICATIONS</a></li>
+          <li><a class="nav-link" href="{%url 'publication_page'%}">PUBLICATIONS</a></li>
           <li><a class="nav-link" href="#team">AWARDS</a></li>
           <li><a class="nav-link" href="#contact">MEDIA</a></li>
-          <li><a class="nav-link active" href="contact/">JOIN US</a></li>
+          <li><a class="nav-link active" href="{%url 'contact_page'%}">JOIN US</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -93,23 +93,24 @@
             <div class="contact-form">
                 <h1>Contact Us</h1>
                 <p class="hint-text">We'd love to hear from you, please drop us a line if you've any query or question.</p>       
-                <form action="/examples/actions/confirmation.php" method="post">
+                <form action="{% url 'contact_page' %}" method="POST">
+                  {% csrf_token %} 
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputName">Name</label>
-                                <input type="text" class="form-control" id="inputName" required>
+                                <input type="text" class="form-control" id="inputName" name="name" required>
                             </div>
                         </div>                
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputEmail">E-mail</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com" required>
+                                <input name="email" type="email" class="form-control" id="inputEmail" placeholder="email@example.com" required>
                             </div>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputStat">Subject</label>
-                          <select id="inputState" class="form-control">
+                          <select id="inputState" name="subject" class="form-control">
                             <option selected>Choose...</option>
                             <option>Internship</option>
                             <option>Collaboration</option>
@@ -120,11 +121,11 @@
                     </div>            
                     <div class="form-group">
                         <label for="inputSubject">Affilation</label>
-                        <input type="text" class="form-control" id="inputSubject" required>
+                        <input type="text" name= "affilation" class="form-control" id="inputSubject" required>
                     </div>
                     <div class="form-group">
                         <label for="inputMessage">Message</label>
-                        <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+                        <textarea class="form-control" name="message" id="inputMessage" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
                 </form>

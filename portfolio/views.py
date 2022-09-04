@@ -3,6 +3,8 @@ from django.shortcuts import render,redirect
 from .models import *
 from hitcount.views import HitCountDetailView
 
+from .forms import ContactFormSubmission
+
 # Create your views here.
 
 
@@ -79,16 +81,15 @@ def publication (request):
     }
     
     return render(request,'publication.html',context)
-def project_page(request):
-    
-    obj = Project.objects.all()
-    associated_contacts=[]
-    obj.order_by('date')
-    print(obj)
-    context={
-        "projects":obj,
-    }
-    
-    return render(request,'index.html',context)
+
+
+def contact(request):
+
+    if request.method=="POST":
+        form = ContactFormSubmission(request.POST)
+        if form.is_valid():
+            form.save()
+        return render(request,'contact.html')
+    return render(request,'contact.html')
 
 
