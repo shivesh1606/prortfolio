@@ -7,3 +7,5 @@ from .models import *
 
 admin.site.register(Profile)
 admin.site.register(Project)
+admin.site.register(View_count)
+admin.site.register(IpModel)
