@@ -92,4 +92,8 @@ def contact(request):
         return render(request,'contact.html')
     return render(request,'contact.html')
 
+def media(request):
+
+    return render(request,'gallery.html')
+
 
