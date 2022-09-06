@@ -1,5 +1,6 @@
 **/__pycache__
 **/DB backup
+**/db.sqlite3
 **/log.txt
 **/staticfiles
 **/media

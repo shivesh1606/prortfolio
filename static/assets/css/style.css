@@ -9,6 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
+  min-height: 100vh;
   font-family: "Open Sans", sans-serif;
   color: #444444;
   scroll-behavior: smooth;
@@ -145,7 +146,7 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   /* background: #fff; */
-  background-color: #0000008a;
+  background-color: #2a3336;
   top: 0px;
   padding:-5px;
 
@@ -635,18 +636,19 @@ font-size:2rem;
 #hero .lineundercarousel button{
   display: block;
 
-  margin: auto;
+  margin: 3% auto;
   padding:5px 4px;
   color:rgb(255, 255, 255);
   background-color: #000000;
   border-color: #00b7ead7;
-  border-radius:10px 0px 10px 0px;
+  border-radius:10px 10px 10px 10px;
   width:15%;
+  font-size: 150%;
   transition-duration: 0.5s;
 }
 #hero .lineundercarousel button:hover{
   background-color: #1f1f1fdc;
-  border-radius:10px 0px 10px 0px;
+  border-radius:10px 10px 10px 10px;
   width:15%;
 }
 
@@ -1392,7 +1394,7 @@ width:50vw;
   align-items:center;
   justify-content:space-evenly;
   border:1.2px solid white;
-  border-radius: 10px 0px 10px 0px;
+  border-radius: 10px 10px 10px 10px;
   padding:10px 5px;
   margin-left:5px;
   left:0px;
@@ -1425,6 +1427,8 @@ width:50vw;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
+  position: sticky;
+  top: 100%;
 }
 
 #footer .footer-top {
