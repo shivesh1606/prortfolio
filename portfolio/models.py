@@ -10,7 +10,9 @@ from django.contrib.contenttypes.fields import GenericRelation
 categotry = {
     ('Journal','Journal'),
     ('Articles','Articles'),
-    ('International Reports','International Reports')
+    ('International Reports','International Reports'),
+    ('Conference','Conference'),
+    
 
 }
 
