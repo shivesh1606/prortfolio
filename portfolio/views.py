@@ -92,8 +92,10 @@ def contact(request):
         return render(request,'contact.html')
     return render(request,'contact.html')
 
-def media(request):
+def equipment(request):
 
     return render(request,'gallery.html')
 
+def media(request):
 
+    return render(request,'media.html')
