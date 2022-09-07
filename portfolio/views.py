@@ -99,3 +99,8 @@ def equipment(request):
 def media(request):
 
     return render(request,'media.html')
+
+def awards(request):
+
+    return render(request,'awards.html')
+
