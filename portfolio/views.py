@@ -89,7 +89,11 @@ def contact(request):
         form = ContactFormSubmission(request.POST)
         if form.is_valid():
             form.save()
-        return render(request,'contact.html')
+            context={
+                "msg" : "Form Submitted Successfully"
+            }
+            
+            return render(request,'contact.html',context)
     return render(request,'contact.html')
 
 def media(request):

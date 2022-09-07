@@ -127,6 +127,10 @@
                         <label for="inputMessage">Message</label>
                         <textarea class="form-control" name="message" id="inputMessage" rows="5" required></textarea>
                     </div>
+                    {% if msg%}
+                    {{msg}}
+                    {%endif%}
+                    <br>
                     <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
                 </form>
             </div>
