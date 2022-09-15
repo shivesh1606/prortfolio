@@ -59,5 +59,12 @@ class Contact_form(models.Model):
 
     def __str__(self):
         return self.name + " - " + self.email
+
+class Awards(models.Model):
+    image=models.CharField(max_length=250, null=True,blank=True)
+    description=models.EmailField(max_length=3000)
+
+    def __str__(self):
+        return self.description
     
     
