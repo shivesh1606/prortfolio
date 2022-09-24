@@ -68,4 +68,13 @@ class Awards(models.Model):
     url=models.CharField(max_length=3000,null=True, blank=True)
     def __str__(self):
         return self.title
+
+
+class Media(models.Model):
+    image=models.FileField(null=True, blank=True)
+    title=models.CharField(max_length=3000,null=True, blank=True)
+    description=models.CharField(max_length=3000,null=True, blank=True)
+
+    def __str__(self):
+        return self.title
     

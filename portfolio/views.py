@@ -101,8 +101,11 @@ def equipment(request):
     return render(request,'gallery.html')
 
 def media(request):
-
-    return render(request,'media.html')
+    obj=Media.objects.all()
+    context={
+        "media" : obj
+    }
+    return render(request,'media.html',context)
 
 def awards(request):
     award=Awards.objects.all()
@@ -110,4 +113,27 @@ def awards(request):
         "obj":award
     }
     return render(request,'awards.html',context)
+
+
+def collaborations(request):
+
+    return render(request,'collaborations.html')
+
+
+def projects(request):
+
+    return render(request,'projects.html')
+
+
+def conference(request):
+
+    return render(request,'conference.html')
+
+def invited(request):
+
+    return render(request,'invited.html')
+
+def editorial(request):
+
+    return render(request,'editorial.html')
 
