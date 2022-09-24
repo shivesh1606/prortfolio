@@ -104,3 +104,26 @@ def awards(request):
 
     return render(request,'awards.html')
 
+
+def collaborations(request):
+
+    return render(request,'collaborations.html')
+
+
+def projects(request):
+
+    return render(request,'projects.html')
+
+
+def conference(request):
+
+    return render(request,'conference.html')
+
+def invited(request):
+
+    return render(request,'invited.html')
+
+def editorial(request):
+
+    return render(request,'editorial.html')
+
