@@ -98,6 +98,7 @@
         </div>
         <div class="members team">
           {%for person in team%}
+          {% ifequal person.category "Team" %}
             <div class="card">
                 <div class="card_img">
                     <img src="{% if person.photo %}{{ person.photo.url }}{% endif %}" alt="">
@@ -107,46 +108,12 @@
                     <h6 class="designation">{{person.university}}</h6>
                 </div>
             </div>
+          {%endifequal%}
             {%endfor%}
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">David Romero</h2>
-                    <h6 class="designation">UI Designer</h6>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.unsplash.com/photo-1516750084685-66c3b1f181ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">Lenora Jordan</h2>
-                    <h6 class="designation">Project Manager</h6>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">David Romero</h2>
-                    <h6 class="designation">UI Designer</h6>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">David Romero</h2>
-                    <h6 class="designation">UI Designer</h6>
-                </div>
-            </div>
         </div>
         <div class="members alumni">
           {%for person in team%}
+          {% ifequal person.category "Alumini" %}
             <div class="card">
                 <div class="card_img">
                     <img src="{% if person.photo %}{{ person.photo.url }}{% endif %}" alt="">
@@ -156,44 +123,8 @@
                     <h6 class="designation">{{person.university}}</h6>
                 </div>
             </div>
+          {%endifequal%}
             {%endfor%}
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">Alumni David Romero</h2>
-                    <h6 class="designation">UI Designer</h6>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.unsplash.com/photo-1516750084685-66c3b1f181ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">Alumni Lenora Jordan</h2>
-                    <h6 class="designation">Project Manager</h6>
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.<path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg> -->
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">Alumni David Romero</h2>
-                    <h6 class="designation">UI Designer</h6>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">David Romero</h2>
-                    <h6 class="designation">UI Designer</h6>
-                </div>
-            </div>
         </div>
     </div>
     </section>

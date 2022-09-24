@@ -47,7 +47,7 @@ def home (request):
     return render(request,'index.html',context)
 
 def team(request):
-    team=Profile.objects.filter(is_current_team_member=True)
+    team=Team.objects.all()
     context={
         "team" : team
     }
@@ -105,6 +105,9 @@ def media(request):
     return render(request,'media.html')
 
 def awards(request):
-
-    return render(request,'awards.html')
+    award=Awards.objects.all()
+    context={
+        "obj":award
+    }
+    return render(request,'awards.html',context)
 
