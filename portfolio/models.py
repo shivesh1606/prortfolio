@@ -30,7 +30,7 @@ class Team(models.Model):
     def __str__(self):
         return self.name
     
-class Project(models.Model):
+class Publication(models.Model):
     id = models.AutoField(primary_key=True)
     info =models.TextField()
     category = models.CharField(max_length=60, choices=categotry ,default='Journal')

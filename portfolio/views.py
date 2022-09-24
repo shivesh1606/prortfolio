@@ -26,22 +26,21 @@ def home (request):
     if len(ip_obj) ==0:
         a=IpModel.objects.create(ip=ip_addr)
         a.save()
-    obj = Project.objects.all()
-    associated_contacts=[]
-    obj.order_by('date')
-    for project in obj:
+    # obj = Publication.objects.all()
+    # associated_contacts=[]
+    # obj.order_by('date')
+    # for Publication in obj:
 
-        if len(project.associated_contact.all()) != 0:
-            associated_contacts.append(project.associated_contact.all()[0])
+    #     if len(Publication.associated_contact.all()) != 0:
+    #         associated_contacts.append(Publication.associated_contact.all()[0])
         
-    print(associated_contacts)
+    # print(associated_contacts)
 
     
     context={
         "count" : IpModel.objects.all().count,
-        "projects":obj,
+        # "Publications":obj,
 
-        "associated_contacts" : associated_contacts
     }
     
     return render(request,'index.html',context)
@@ -62,22 +61,12 @@ def publication (request):
     if len(ip_obj) ==0:
         a=IpModel.objects.create(ip=ip_addr)
         a.save()
-    obj = Project.objects.all()
-    associated_contacts=[]
+    obj = Publication.objects.all()
     obj.order_by('date')
-    for project in obj:
-
-        if len(project.associated_contact.all()) != 0:
-            associated_contacts.append(project.associated_contact.all()[0])
-        
-    print(associated_contacts)
-
     
     context={
         "count" : IpModel.objects.all().count,
         "projects":obj,
-
-        "associated_contacts" : associated_contacts
     }
     
     return render(request,'publication.html',context)
@@ -122,7 +111,7 @@ def collaborations(request):
 
 def projects(request):
 
-    return render(request,'projects.html')
+    return render(request,'Publications.html')
 
 
 def conference(request):

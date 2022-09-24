@@ -6,7 +6,7 @@ from .models import *
 
 
 admin.site.register(Team)
-admin.site.register(Project)
+admin.site.register(Publication)
 admin.site.register(View_count)
 admin.site.register(IpModel)
 admin.site.register(Contact_form)
