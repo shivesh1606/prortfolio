@@ -87,10 +87,20 @@
   </header>
   <!-- End Header -->
 
-  <!-- ======= Collaborations ======= -->
-  
+  <!-- ======= Projects ======= -->
+  <div class="content d-flex justify-center pt-4" style="justify-content:center;">
+    <div class="Journal-Articles-container section col-xl-11 col-lg-10">
+      {% for p in projects%}
+      <p class="content-rows">
+        <b>{{p.date}}</b>
+        {{p.info}}
+      </p>
+      {% endfor %}
+    </div>
+   
+  </div>
 
-  <!-- ======= End Collaborations ======= -->
+  <!-- ======= End Projects ======= -->
 
 
   <!-- ======= Footer ======= -->

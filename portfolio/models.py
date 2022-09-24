@@ -16,6 +16,12 @@ categotry = {
     
 
 }
+
+categotry_reasearch = {
+    ('Invited Talks','Invited Talks'),
+    ('Editorial Boards','Editorial Boards'),
+    ('Conference Presentation','Conference Presentation'),
+}
 categotry_team_member = {
     ('Team','Team'),
 ('Alumini','Alumini')
@@ -77,4 +83,23 @@ class Media(models.Model):
 
     def __str__(self):
         return self.title
-    
+
+
+class Project(models.Model):
+    id = models.AutoField(primary_key=True)
+    info =models.TextField()
+    date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.info 
+
+
+class Reasearch(models.Model):
+    id = models.AutoField(primary_key=True)
+    info =models.TextField()
+    category = models.CharField(max_length=60, choices=categotry_reasearch ,default='Invited Talks')
+
+    date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.category +" - "+self.info

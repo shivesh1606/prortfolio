@@ -110,19 +110,47 @@ def collaborations(request):
 
 
 def projects(request):
-
-    return render(request,'projects.html')
+    obj = Project.objects.all()
+    obj.order_by('date')
+    
+    context={
+        "count" : IpModel.objects.all().count,
+        "projects":obj,
+    }
+    
+    return render(request,'projects.html',context)
 
 
 def conference(request):
-
-    return render(request,'conference.html')
+    obj = Reasearch.objects.filter(category='Conference Presentation')
+    obj.order_by('date')
+    
+    context={
+        "count" : IpModel.objects.all().count,
+        "projects":obj,
+    }
+    print(obj)
+    return render(request,'conference.html',context)
 
 def invited(request):
+    obj = Reasearch.objects.filter(category='Invited Talks')
+    obj.order_by('date')
+    
+    context={
+        "count" : IpModel.objects.all().count,
+        "projects":obj,
+    }
+    print(obj)
 
-    return render(request,'invited.html')
+    return render(request,'invited.html',context)
 
 def editorial(request):
-
-    return render(request,'editorial.html')
+    obj = Reasearch.objects.filter(category='Editorial Boards')
+    obj.order_by('date')
+    
+    context={
+        "count" : IpModel.objects.all().count,
+        "projects":obj,
+    }
+    return render(request,'editorial.html',context)
 

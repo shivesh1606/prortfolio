@@ -87,10 +87,20 @@
   </header>
   <!-- End Header -->
 
-  <!-- ======= Collaborations ======= -->
-  
+  <!-- ======= Conference ======= -->
+  <div class="content">
+    <div class="Journal-Articles-container section">
+      {% for p in projects%}
+      <p class="content-rows">
+        <b>{{p.date}}</b>
+        {{p.info}}
+      </p>
+      {% endfor %}
+    </div>
+   
+  </div>
 
-  <!-- ======= End Collaborations ======= -->
+  <!-- ======= End Conference ======= -->
 
 
   <!-- ======= Footer ======= -->
