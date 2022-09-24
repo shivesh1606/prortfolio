@@ -111,7 +111,7 @@ def collaborations(request):
 
 def projects(request):
 
-    return render(request,'Publications.html')
+    return render(request,'projects.html')
 
 
 def conference(request):
