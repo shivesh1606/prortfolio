@@ -38,6 +38,7 @@
 
   <!-- Template Main CSS File -->
   <link href="/static/assets/css/style.css" rel="stylesheet">
+  <link href="/static/assets/css/publicationstyle.css" rel="stylesheet">
 
 </head>
 
@@ -64,8 +65,8 @@
         <ul>
           <li><a class="nav-link scrollto" href="{%url 'home_page'%}">HOME</a></li>
           <li><a class="nav-link scrollto" href="{%url 'team_page'%}">TEAM</a></li>
-          <li><a class="nav-link scrollto" href="#services">EQUIPMENT</a></li>
-          <li class="dropdown"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="{%url 'equipment_page'%}">EQUIPMENT</a></li>
+          <li class="dropdown active"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{%url 'projects_page'%}">PROJECTS</a></li>
               <li><a href="{%url 'collaborations_page'%}">COLLABORATIONS</a></li>
@@ -76,7 +77,7 @@
           </li>
           <li><a class="nav-link" href="{%url 'publication_page'%}">PUBLICATIONS</a></li>
           <li><a class="nav-link" href="{%url 'awards_page'%}">AWARDS</a></li>
-          <li><a class="nav-link active" href="{%url 'media_page'%}">MEDIA</a></li>
+          <li><a class="nav-link" href="{%url 'media_page'%}">MEDIA</a></li>
           <li><a class="nav-link" href="{%url 'contact_page'%}">JOIN US</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -86,17 +87,10 @@
   </header>
   <!-- End Header -->
 
-  <!-- ======= Media ======= -->
-    <div id="media" class="media">
-        <div class="media-card">
-            <img src="https://picsum.photos/id/20/600/300"/>
-            <div class="media-card-text">
-              <h2>Card Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veritatis eaque necessitatibus, explicabo vero hic,.</p>
-            </div>
-        </div>
-    </div>
-  <!-- ======= End Media ======= -->
+  <!-- ======= Collaborations ======= -->
+  
+
+  <!-- ======= End Collaborations ======= -->
 
 
   <!-- ======= Footer ======= -->
@@ -136,7 +130,10 @@
             </ul>
           </div>
           <div class="col-lg-5 col-md-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.9668550499273!2d87.30955121474393!3d22.317093247925133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d441cac5ce34b%3A0x47b8c7f41815e553!2sTakshashila!5e0!3m2!1sen!2sin!4v1662198398199!5m2!1sen!2sin" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.9668550499273!2d87.30955121474393!3d22.317093247925133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d441cac5ce34b%3A0x47b8c7f41815e553!2sTakshashila!5e0!3m2!1sen!2sin!4v1662198398199!5m2!1sen!2sin"
+              width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
         </div>
@@ -159,7 +156,8 @@
 
   <!-- Template Main JS File -->
   <script src="/static/assets/js/main.js"></script>
+ 
 
 </body>
-
+<script src="/static/assets/js/publication.js"></script>
 </html>
