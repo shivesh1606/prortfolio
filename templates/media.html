@@ -88,13 +88,15 @@
 
   <!-- ======= Media ======= -->
     <div id="media" class="media">
+      {% for obj in media %}
         <div class="media-card">
-            <img src="https://picsum.photos/id/20/600/300"/>
+            <img src={{obj.image.url}}/>
             <div class="media-card-text">
-              <h2>Card Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veritatis eaque necessitatibus, explicabo vero hic,.</p>
+              <h2>{{obj.title}}</h2>
+              <p>{{obj.description}}</p>
             </div>
         </div>
+      {%endfor%}
     </div>
   <!-- ======= End Media ======= -->
 

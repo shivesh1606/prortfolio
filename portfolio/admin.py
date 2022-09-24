@@ -5,8 +5,12 @@ from django.http import HttpResponse
 from .models import *
 
 
-admin.site.register(Profile)
-admin.site.register(Project)
+admin.site.register(Team)
+admin.site.register(Publication)
 admin.site.register(View_count)
 admin.site.register(IpModel)
 admin.site.register(Contact_form)
+admin.site.register(Awards)
+admin.site.register(Media)
+admin.site.register(Project)
+admin.site.register(Reasearch)

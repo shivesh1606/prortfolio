@@ -26,28 +26,27 @@ def home (request):
     if len(ip_obj) ==0:
         a=IpModel.objects.create(ip=ip_addr)
         a.save()
-    obj = Project.objects.all()
-    associated_contacts=[]
-    obj.order_by('date')
-    for project in obj:
+    # obj = Publication.objects.all()
+    # associated_contacts=[]
+    # obj.order_by('date')
+    # for Publication in obj:
 
-        if len(project.associated_contact.all()) != 0:
-            associated_contacts.append(project.associated_contact.all()[0])
+    #     if len(Publication.associated_contact.all()) != 0:
+    #         associated_contacts.append(Publication.associated_contact.all()[0])
         
-    print(associated_contacts)
+    # print(associated_contacts)
 
     
     context={
         "count" : IpModel.objects.all().count,
-        "projects":obj,
+        # "Publications":obj,
 
-        "associated_contacts" : associated_contacts
     }
     
     return render(request,'index.html',context)
 
 def team(request):
-    team=Profile.objects.filter(is_current_team_member=True)
+    team=Team.objects.all()
     context={
         "team" : team
     }
@@ -62,22 +61,12 @@ def publication (request):
     if len(ip_obj) ==0:
         a=IpModel.objects.create(ip=ip_addr)
         a.save()
-    obj = Project.objects.all()
-    associated_contacts=[]
+    obj = Publication.objects.all()
     obj.order_by('date')
-    for project in obj:
-
-        if len(project.associated_contact.all()) != 0:
-            associated_contacts.append(project.associated_contact.all()[0])
-        
-    print(associated_contacts)
-
     
     context={
         "count" : IpModel.objects.all().count,
         "projects":obj,
-
-        "associated_contacts" : associated_contacts
     }
     
     return render(request,'publication.html',context)
@@ -89,7 +78,11 @@ def contact(request):
         form = ContactFormSubmission(request.POST)
         if form.is_valid():
             form.save()
-        return render(request,'contact.html')
+            context={
+                "msg" : "Form Submitted Successfully"
+            }
+            
+            return render(request,'contact.html',context)
     return render(request,'contact.html')
 
 def equipment(request):
@@ -97,12 +90,18 @@ def equipment(request):
     return render(request,'gallery.html')
 
 def media(request):
-
-    return render(request,'media.html')
+    obj=Media.objects.all()
+    context={
+        "media" : obj
+    }
+    return render(request,'media.html',context)
 
 def awards(request):
-
-    return render(request,'awards.html')
+    award=Awards.objects.all()
+    context={
+        "obj":award
+    }
+    return render(request,'awards.html',context)
 
 
 def collaborations(request):
@@ -111,19 +110,47 @@ def collaborations(request):
 
 
 def projects(request):
-
-    return render(request,'projects.html')
+    obj = Project.objects.all()
+    obj.order_by('date')
+    
+    context={
+        "count" : IpModel.objects.all().count,
+        "projects":obj,
+    }
+    
+    return render(request,'projects.html',context)
 
 
 def conference(request):
-
-    return render(request,'conference.html')
+    obj = Reasearch.objects.filter(category='Conference Presentation')
+    obj.order_by('date')
+    
+    context={
+        "count" : IpModel.objects.all().count,
+        "projects":obj,
+    }
+    print(obj)
+    return render(request,'conference.html',context)
 
 def invited(request):
+    obj = Reasearch.objects.filter(category='Invited Talks')
+    obj.order_by('date')
+    
+    context={
+        "count" : IpModel.objects.all().count,
+        "projects":obj,
+    }
+    print(obj)
 
-    return render(request,'invited.html')
+    return render(request,'invited.html',context)
 
 def editorial(request):
-
-    return render(request,'editorial.html')
+    obj = Reasearch.objects.filter(category='Editorial Boards')
+    obj.order_by('date')
+    
+    context={
+        "count" : IpModel.objects.all().count,
+        "projects":obj,
+    }
+    return render(request,'editorial.html',context)
 

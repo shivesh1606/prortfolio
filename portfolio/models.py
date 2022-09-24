@@ -9,30 +9,38 @@ from django.contrib.contenttypes.fields import GenericRelation
 
 categotry = {
     ('Journal','Journal'),
-    ('Articles','Articles'),
+    ('Book Chapters','Book Chapters'),
+    ('Books','Books'),
     ('International Reports','International Reports'),
     ('Conference','Conference'),
     
 
 }
 
-class Profile(models.Model):
+categotry_reasearch = {
+    ('Invited Talks','Invited Talks'),
+    ('Editorial Boards','Editorial Boards'),
+    ('Conference Presentation','Conference Presentation'),
+}
+categotry_team_member = {
+    ('Team','Team'),
+('Alumini','Alumini')
+
+}
+
+class Team(models.Model):
     id = models.AutoField(primary_key=True)
     name=models.CharField(max_length=250, null=True,blank=True)
     photo = models.FileField(null=True, blank=True)
-    country=models.CharField(max_length=250, null=True,blank=True)
-    university= models.CharField(max_length=250, null=True,blank=True)
-    is_current_team_member=models.BooleanField(default=False)
-
+    category = models.CharField(max_length=60, choices=categotry_team_member ,default='Team')
     def __str__(self):
         return self.name
     
-class Project(models.Model):
+class Publication(models.Model):
     id = models.AutoField(primary_key=True)
     info =models.TextField()
     category = models.CharField(max_length=60, choices=categotry ,default='Journal')
-    associated_contact=models.ManyToManyField(
-        Profile, related_name='users', blank=True)
+
     date = models.DateField(null=True)
 
     def __str__(self):
@@ -59,5 +67,39 @@ class Contact_form(models.Model):
 
     def __str__(self):
         return self.name + " - " + self.email
-    
-    
+
+class Awards(models.Model):
+    image=models.FileField(null=True, blank=True)
+    title=models.CharField(max_length=3000,null=True, blank=True)
+    url=models.CharField(max_length=3000,null=True, blank=True)
+    def __str__(self):
+        return self.title
+
+
+class Media(models.Model):
+    image=models.FileField(null=True, blank=True)
+    title=models.CharField(max_length=3000,null=True, blank=True)
+    description=models.CharField(max_length=3000,null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Project(models.Model):
+    id = models.AutoField(primary_key=True)
+    info =models.TextField()
+    date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.info 
+
+
+class Reasearch(models.Model):
+    id = models.AutoField(primary_key=True)
+    info =models.TextField()
+    category = models.CharField(max_length=60, choices=categotry_reasearch ,default='Invited Talks')
+
+    date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.category +" - "+self.info

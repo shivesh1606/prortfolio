@@ -91,10 +91,12 @@
   <div class="publications">
 
     <div class="publi_buttons">
-      <button class="Journal-Articles">Journal Articles</button>
+      <button class="Journal-Articles">Journal</button>
       <button class="Conference-Proceddings">Conference Proceddings</button>
-      <button class="Book-Chapters">Articles</button>
-      <button class="Books">International Reports</button>
+      <button class="Book-Chapters">Book Chapters</button>
+      
+      <button class="International-Reports">International Reports</button>
+      <button class="Books">Books</button>
     </div>
     <div class="content">
       <div class="Journal-Articles-container section">
@@ -113,14 +115,21 @@
       </div>
       <div class="Book-Chapters-container section">
         {% for p in projects%}
-        {% ifequal p.category  "Articles" %}
+        {% ifequal p.category  "Book Chapters" %}
+        <p class="content-rows">{{p.info}}</p>
+        {% endifequal %}
+        {% endfor %}
+      </div>
+      <div class="International-Reports section">
+        {% for p in projects%}
+        {% ifequal p.category  "International Reports" %}
         <p class="content-rows">{{p.info}}</p>
         {% endifequal %}
         {% endfor %}
       </div>
       <div class="Books-container section">
         {% for p in projects%}
-        {% ifequal p.category  "International Reports" %}
+        {% ifequal p.category  "Books" %}
         <p class="content-rows">{{p.info}}</p>
         {% endifequal %}
         {% endfor %}

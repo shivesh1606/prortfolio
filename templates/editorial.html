@@ -88,7 +88,23 @@
   <!-- End Header -->
 
   <!-- ======= Collaborations ======= -->
-  
+  <div class="content">
+    <div class="Journal-Articles-container section">
+      <p class="content-rows">
+ <h1>Member of Editorial Boards</h1>
+      </p>
+ 
+    </div>
+    <div class="Journal-Articles-container section">
+      {% for p in projects%}
+      <p class="content-rows">
+        <b>{{p.date}}</b>
+        {{p.info}}
+      </p>
+      {% endfor %}
+    </div>
+   
+  </div>
 
   <!-- ======= End Collaborations ======= -->
 

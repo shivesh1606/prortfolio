@@ -98,144 +98,28 @@
 
 
     <!--cards -->
-
+    {% for ob in obj%}
     <div class="card">
 
       <div class="image">
-        <img src="/static/assets/img/award.jpg">
+        <img src="{% if ob.image %}{{ ob.image.url }}{% endif %}" alt="">
 
       </div>
       <div class="description">
         <div class="title">
           <h1>
-            Award1</h1>
+            {{ob.title}}</h1>
         </div>
         <div class="des">
-          <p>Competition 1</p>
-          <button>Read More...</button>
+          {% comment %} <p>{{ob.description}}</p> {% endcomment %}
+          <button ><a href={{ob.url}}>Read More...</a></button>
         </div>
       </div>
      
     </div>
+    {%endfor%}
     <!--cards -->
 
-    <!--cards -->
-
-    <div class="card">
-
-      <div class="image">
-        <img src="/static/assets/img/award.jpg">
-
-      </div>
-      <div class="description">
-        <div class="title">
-          <h1>
-            Award1</h1>
-        </div>
-        <div class="des">
-          <p>Competition 1</p>
-          <button>Read More...</button>
-        </div>
-      </div>
-     
-    </div>
-    <!--cards -->
-
-    <!--cards -->
-    <!--cards -->
-
-    <div class="card">
-
-      <div class="image">
-        <img src="/static/assets/img/award.jpg">
-
-      </div>
-      <div class="description">
-        <div class="title">
-          <h1>
-            Award1</h1>
-        </div>
-        <div class="des">
-          <p>Competition 1</p>
-          <button>Read More...</button>
-        </div>
-      </div>
-     
-    </div>
-    <!--cards -->
-
-    <!--cards -->
-
-    <!--cards -->
-    <div class="card">
-
-      <div class="image">
-        <img src="/static/assets/img/award.jpg">
-
-      </div>
-      <div class="description">
-        <div class="title">
-          <h1>
-            Award1</h1>
-        </div>
-        <div class="des">
-          <p>Competition 1</p>
-          <button>Read More...</button>
-        </div>
-      </div>
-     
-    </div>
-    <!--cards -->
-
-    <!--cards -->
-
-    <!--cards -->
-    <div class="card">
-
-      <div class="image">
-        <img src="/static/assets/img/award.jpg">
-
-      </div>
-      <div class="description">
-        <div class="title">
-          <h1>
-            Award1</h1>
-        </div>
-        <div class="des">
-          <p>Competition 1</p>
-          <button>Read More...</button>
-        </div>
-      </div>
-     
-    </div>
-    <!--cards -->
-
-    <!--cards -->
-    <!--cards -->
-
-    <!--cards -->
-
-    <div class="card">
-
-      <div class="image">
-        <img src="/static/assets/img/award.jpg">
-
-      </div>
-      <div class="description">
-        <div class="title">
-          <h1>
-            Award1</h1>
-        </div>
-        <div class="des">
-          <p>Competition 1</p>
-          <button>Read More...</button>
-        </div>
-      </div>
-     
-    </div>
-    <!--cards -->
-
-    <!--cards -->
     <!--cards -->
 
 
