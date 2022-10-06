@@ -658,8 +658,9 @@ font-size:2rem;
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 20px 0;
 }
+
 
 .section-bg {
   background-color: #f2fdff;
@@ -1155,33 +1156,39 @@ width:50vw;
    color:rgb(255, 255, 255);
    background-color: #000000df;
    margin:10px;
+   margin-top: 0px;
 }
 .members {
   display:grid;
-  grid-template-columns: 0.6fr 0.6fr 0.6fr;
- grid-gap:4px ;
- align-items: center; 
+
+  grid-template-columns: 0.8fr 0.8fr 0.8fr ;
+  grid-row-gap:10px ;
+  grid-column-gap:10px;
+  align-items: center; 
+  place-items:center;
   
   
 }
 .members .card {
   overflow: hidden;
-
-  padding: 15px;
-  background: linear-gradient(171.38deg, #3ebfff 3.36%, #E2EAF5 95.69%);
+  /* padding: 10px; */
+  background: linear-gradient(171.38deg, #b4e4fc 3.36%, #E2EAF5 95.69%);
   box-shadow: 0px 0px 20px rgba(45, 236, 250, 0.3);
-  border:1px solid black;
-  width:100%;
+  border:2px solid rgb(244, 244, 244);
+  width:90%;
+  margin:5px;
   text-align: center;
   
 }
 .members .card .card_img img {
   width: 100%;
-  height:400px;
+  height:300px;
   /* border-radius: 20px; */
 }
 .team-details {
-  padding: 26px 10px 36px 10px;
+  /* padding: 26px 10px 36px 10px; */
+  margin:4px 5px;
+
 }
 .members-name {
   font-weight: 600;
@@ -1195,25 +1202,33 @@ width:50vw;
   font-size: 15px;
   color: #959EAF;
 }
-@media only screen and (max-width: 1024px) {
-  .members {
-      grid-template-columns: 1fr;
-      gap: 2%;
-  }
+@media only screen and (min-width: 1024px) {
+ /* for laptops */
 }
-@media only screen and (max-width: 425px) {
-  .team .container {
-      /* padding: 0 1rem; */
+@media only screen and (min-width:701px) and (max-width: 1023px) {
+  .members{
+    display:grid;
+
+    grid-template-columns: 0.8fr 0.8fr;
+    grid-row-gap:10px ;
+    grid-column-gap:10px;
+    align-items: center; 
+    place-items:center;
   }
-  .card {
-      padding: 12px;
+ 
+}
+@media only screen and (max-width:700px) {
+  
+  .members{
+    display:grid;
+
+    grid-template-columns: 1fr;
+    grid-row-gap:10px ;
+    align-items: center;
+    place-items:center;
   }
-  .member-name {
-      font-size: 26px;
-  }
-  .designation {
-      font-size: 18px;
-  }
+
+
 }
 
 /*--------------------------------------------------------------
@@ -1379,7 +1394,7 @@ width:50vw;
   width: 100%;
   height: 100%;
   color: #464646;
-  background: #e6e6e6;
+  /* background: #e6e6e6; */
 }
 
 .media h2 {
@@ -1388,10 +1403,11 @@ width:50vw;
 
 .media {
   width: 100%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 25px 20px;
+  /* gap: 25px 20px; */
   margin: 0 auto;
   padding: 40px 15px;
   box-sizing: border-box;
@@ -1399,8 +1415,9 @@ width:50vw;
 }
 
 .media-card {
-  width: 100%;
-  max-width: 400px;
+  width: 40%;
+  /* max-width: 400px;s */
+  margin:10px;
   background: white;
   border-radius: 5px;
   overflow: hidden;
