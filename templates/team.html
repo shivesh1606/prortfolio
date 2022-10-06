@@ -65,7 +65,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link" href="{% url 'home_page' %}" >HOME</a></li>
+          <li><a class="nav-link" href="{% url 'home_page' %}">HOME</a></li>
           <li><a class="nav-link active" href="{%url 'team_page'%}">TEAM</a></li>
           <li><a class="nav-link" href="{%url 'equipment_page'%}">EQUIPMENT</a></li>
           <li class="dropdown"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
@@ -90,44 +90,44 @@
   <!-- End Header -->
 
   <!-- ======= Team  ======= -->
-  <section class="team">    
+  <section class="team">
     <div class="container">
-        <div class="section-title">
-            <button id="teambutton">TEAM</button>
-            <button id="alumnibutton">ALUMNI</button>
+      <div class="section-title">
+        <button id="teambutton">TEAM</button>
+        <button id="alumnibutton">ALUMNI</button>
+      </div>
+      <div class="members team">
+        {%for person in team%}
+        {% ifequal person.category "Team" %}
+        <div class="card">
+          <div class="card_img">
+            <img src="{% if person.photo %}{{ person.photo.url }}{% endif %}" alt="">
+          </div>
+          <div class="team-details">
+            <h2 class="member-name">{{person.name}}</h2>
+            <h6 class="designation">{{person.university}}</h6>
+          </div>
         </div>
-        <div class="members team">
-          {%for person in team%}
-          {% ifequal person.category "Team" %}
-            <div class="card">
-                <div class="card_img">
-                    <img src="{% if person.photo %}{{ person.photo.url }}{% endif %}" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">{{person.name}}</h2>
-                    <h6 class="designation">{{person.university}}</h6>
-                </div>
-            </div>
-          {%endifequal%}
-            {%endfor%}
+        {%endifequal%}
+        {%endfor%}
+      </div>
+      <div class="members alumni">
+        {%for person in team%}
+        {% ifequal person.category "Alumini" %}
+        <div class="card">
+          <div class="card_img">
+            <img src="{% if person.photo %}{{ person.photo.url }}{% endif %}" alt="">
+          </div>
+          <div class="team-details">
+            <h2 class="member-name">{{person.name}}</h2>
+            <h6 class="designation">{{person.university}}</h6>
+          </div>
         </div>
-        <div class="members alumni">
-          {%for person in team%}
-          {% ifequal person.category "Alumini" %}
-            <div class="card">
-                <div class="card_img">
-                    <img src="{% if person.photo %}{{ person.photo.url }}{% endif %}" alt="">
-                </div>
-                <div class="team-details">
-                    <h2 class="member-name">{{person.name}}</h2>
-                    <h6 class="designation">{{person.university}}</h6>
-                </div>
-            </div>
-          {%endifequal%}
-            {%endfor%}
-        </div>
+        {%endifequal%}
+        {%endfor%}
+      </div>
     </div>
-    </section>
+  </section>
 
   <!-- ======= End Team ======= -->
 
@@ -168,7 +168,10 @@
             </ul>
           </div>
           <div class="col-lg-5 col-md-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.9668550499273!2d87.30955121474393!3d22.317093247925133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d441cac5ce34b%3A0x47b8c7f41815e553!2sTakshashila!5e0!3m2!1sen!2sin!4v1662198398199!5m2!1sen!2sin" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.9668550499273!2d87.30955121474393!3d22.317093247925133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d441cac5ce34b%3A0x47b8c7f41815e553!2sTakshashila!5e0!3m2!1sen!2sin!4v1662198398199!5m2!1sen!2sin"
+              width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
         </div>
@@ -192,7 +195,7 @@
   <!-- Template Main JS File -->
   <script src="/static/assets/js/main.js"></script>
   <script src="/static/assets/js/team.js"></script>
-   
+
 </body>
 
 </html>
