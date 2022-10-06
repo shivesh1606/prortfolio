@@ -65,7 +65,7 @@
         <ul>
           <li><a class="nav-link" href="{%url 'home_page'%}">HOME</a></li>
           <li><a class="nav-link" href="{%url 'team_page'%}">TEAM</a></li>
-          <li><a class="nav-link" href="{%url 'equipment_page'%}">EQUIPMENT</a></li>
+          <li><a class="nav-link " href="{%url 'equipment_page'%}">EQUIPMENT</a></li>
           <li class="dropdown"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{%url 'projects_page'%}">PROJECTS</a></li>
@@ -89,7 +89,7 @@
 
   <!-- ======= Contact Us ======= -->
   
-    <div class="row">
+    {% comment %} <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="contact-form">
                 <h1>Contact Us</h1>
@@ -141,7 +141,7 @@
         </div>
     </div>
 </div>   -->
-  
+   {% endcomment %}
   <section id="contact">
     <div class="contact-box">
       <div class="contact-links">
@@ -165,7 +165,7 @@
         <form action="{% url 'contact_page' %}" method="POST">
           {% csrf_token %} 
           <div class="form-item">
-            <input type="text" name="sender" required>
+            <input type="text" name="name" required>
             <label>Name:</label>
           </div>
           <div class="form-item">
@@ -190,6 +190,11 @@
             <textarea class="" name="message" required></textarea>
             <label>Message:</label>
           </div>
+          {% if msg%}
+                    <div class="alert alert-primary" role="alert">
+                     {{msg}}
+                    </div>
+                    {%endif%}
           <button class="submit-btn" type="submit">Send</button>  
         </form>
       </div>
