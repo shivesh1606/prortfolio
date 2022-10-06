@@ -6,7 +6,7 @@
 body
 {
     align-items: center;
-    background: linear-gradient(rgba(85, 83, 83, 0.603),#101b1b,#6e7c7c, #8e9181);
+    /* background: linear-gradient(rgba(85, 83, 83, 0.603),#101b1b,#6e7c7c, #8e9181); */
     padding: 0 0;
 
     
@@ -157,8 +157,9 @@ img.d-block.w-100
 
 .gallery
 {
-    background-color: transparent;
-    margin-top: 10vh;
+  background-color: rgba(118, 190, 203, 0.68);
+
+    /* margin-top: 10vh; */
 }
 
 .site-footer
