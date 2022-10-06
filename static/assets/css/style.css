@@ -716,6 +716,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 .about .content h2 {
   font-weight: 700;
   font-size: 48px;
@@ -753,6 +754,7 @@ section {
 }
 
 .welcome_message{
+  text-align: center;
   margin-top: 7%;
 }
 
@@ -800,6 +802,7 @@ About Prof
   justify-content: center;
   align-items: center;
   background-color: #009ec577;
+ 
   /* background: url(); */
 }
 
@@ -1415,7 +1418,7 @@ width:50vw;
 }
 
 .media-card {
-  width: 40%;
+  width: 25%;
   /* max-width: 400px;s */
   margin:10px;
   background: white;
@@ -1425,12 +1428,31 @@ width:50vw;
 }
 .media-card img {
   width: 100%;
-  object-fit: contain;
+  max-height: 350px;
+  /* object-fit: contain; */
 }
 
 .media-card-text {
-  padding: 0 20px 10px 20px;
+  text-align: center;
+  padding: 5px;
 }
+/* making the media page responsive */
+@media only screen and (min-width:701px) and (max-width: 1023px) {
+ 
+  .media-card {
+    width: 45%;
+  }
+ 
+}
+@media only screen and (max-width:700px) {
+  .media-card {
+    width: 90%;
+  }
+
+
+}
+
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
