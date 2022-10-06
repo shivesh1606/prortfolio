@@ -4,6 +4,10 @@ from .models import *
 from hitcount.views import HitCountDetailView
 
 from .forms import ContactFormSubmission
+import json
+
+from django.http import JsonResponse
+from django.core.serializers.json import DjangoJSONEncoder
 
 # Create your views here.
 
@@ -105,8 +109,32 @@ def awards(request):
 
 
 def collaborations(request):
+    obj=Map_Location.objects.values()
 
-    return render(request,'collaborations.html')
+ 
+    data_json = json.dumps(list(obj), cls=DjangoJSONEncoder)
+
+
+
+    data =list(obj)
+    print(data)
+    new_data=[]
+    for d in data:
+        l=[]
+        l.append(d["title"])
+        dict_ob={}
+        dict_ob["lat"]=float(d["lat"])
+        dict_ob["lng"]=float(d["lng"])
+        l.append(dict_ob)
+        new_data.append(l)
+    print(new_data)
+    context={
+        "obj":data,
+        "django_list":new_data
+    }
+
+    # print(JsonResponse(data,safe = False).status)
+    return render(request,'collaborations.html',context)
 
 
 def projects(request):

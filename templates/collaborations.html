@@ -156,6 +156,16 @@
         </div>
       </div>
     </div>
+    {% comment %} <div class="js_objects">
+    {% for d in obj%}
+      <input value="{{d.title}}">
+      <input value="lat : {{d.lat}}">
+      <input value="lan : {{d.lng}}">
+      
+
+    {% endfor %} 
+<div/> {% endcomment %}
+
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -175,12 +185,27 @@
   <script>
     // Initialize and add the map
     function initMap() {
+
+      var js_list = "{{django_list}}";
+      var myDjangoList = (("{{django_list |safe}}").replace(/&(l|g|quo)t;/g, function(a,b){
+            return {
+                l   : '<',
+                g   : '>',
+                quo : '"'
+            }[b];
+        }));
+      
+          myDjangoList = myDjangoList.replace(/u'/g, '\'')
+          myDjangoList = myDjangoList.replace(/'/g, '\"')
+      
+          myData = JSON.parse( myDjangoList );
+          console.log(myData)
+      
       // The location of Uluru
       // const uluru = { lat: -25.344, lng: 131.031 };
-      var location = [
-         ['Project A', { lat: -25.344, lng: 131.031 }],
-         ['Project B', { lat: 3.200848, lng: 101.616669}]
-    ];
+      var location = myData;
+
+    
       // The map, centered at Uluru
       var map = new google.maps.Map(document.getElementById("map"), {
         zoom: 2.5,
@@ -211,6 +236,9 @@ for (i = 0; i < location.length; i++) {
     }
 
     window.initMap = initMap;
+    {% comment %} console.log("{{json_obj}}") {% endcomment %}
+  
+   
   </script>
   <script src="/static/assets/js/publication.js"></script>
 </body>
