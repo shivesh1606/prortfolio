@@ -38,6 +38,7 @@
 
   <!-- Template Main CSS File -->
   <link href="/static/assets/css/style.css" rel="stylesheet">
+  <link href="/static/assets/css/contact.css" rel="stylesheet">
 
 </head>
 
@@ -87,7 +88,7 @@
   <!-- End Header -->
 
   <!-- ======= Contact Us ======= -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="contact-form">
@@ -139,7 +140,62 @@
             </div>
         </div>
     </div>
-</div>  
+</div>   -->
+  
+  <section id="contact">
+    <div class="contact-box">
+      <div class="contact-links">
+        <h2>CONTACT</h2>
+        <div class="links">
+          <div class="link">
+            <a><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin"></a>
+          </div>
+          <div class="link">
+            <a><img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github"></a>
+          </div>
+          <div class="link">
+            <a><img src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen"></a>
+          </div>
+          <div class="link">
+            <a><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email"></a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <form action="{% url 'contact_page' %}" method="POST">
+          {% csrf_token %} 
+          <div class="form-item">
+            <input type="text" name="sender" required>
+            <label>Name:</label>
+          </div>
+          <div class="form-item">
+            <input type="text" name="email" required>
+            <label>Email:</label>
+          </div>
+          <div class="form-item">
+            <label></label>
+            <select class="" name="subject" required>
+              <option></option>
+              <option>Internship</option>
+              <option>Collaboration</option>
+              <option>Ph.D position</option>
+              <option>Post-Doctoral position</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <input type="text" name="affilation" required>
+            <label>Affilation:</label>
+          </div>
+          <div class="form-item">
+            <textarea class="" name="message" required></textarea>
+            <label>Message:</label>
+          </div>
+          <button class="submit-btn" type="submit">Send</button>  
+        </form>
+      </div>
+    </div>
+</section>
+
   <!-- ======= End Contact Us ======= -->
 
 
@@ -202,8 +258,8 @@
   <script src="/static/assets/vendor/php-email-form/validate.js"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  <!-- Template Main JS File -->
-  <script src="/static/assets/js/main.js"></script>
+<!-- Template Main JS File -->
+<script src="/static/assets/js/main.js"></script>
 
 </body>
 
