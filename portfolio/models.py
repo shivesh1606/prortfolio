@@ -103,3 +103,14 @@ class Reasearch(models.Model):
 
     def __str__(self):
         return self.category +" - "+self.info
+
+
+class Map_Location(models.Model):
+    id = models.AutoField(primary_key=True)
+    title=models.CharField(max_length=600)
+    lat=models.CharField(max_length=60)
+    lng=models.CharField(max_length=60)
+
+
+    def __str__(self):
+        return self.title+" : "+self.lat +" - "+self.lng
