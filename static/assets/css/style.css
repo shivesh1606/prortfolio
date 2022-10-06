@@ -813,9 +813,8 @@ width:50vw;
 
 .profInfo{
   display: flex;
-  flex-direction: column;
   justify-content:space-around;
-  align-items:center;
+  text-align: center;
   flex-flow: column;
 
 }
