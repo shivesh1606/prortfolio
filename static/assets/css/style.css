@@ -1,9 +1,3 @@
-/**
-* Template Name: MyBiz - v4.8.1
-* Template URL: https://bootstrapmade.com/mybiz-free-business-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -1174,8 +1168,8 @@ width:50vw;
 }
 .members .card {
   overflow: hidden;
-  /* padding: 10px; */
-  background: linear-gradient(171.38deg, #b4e4fc 3.36%, #E2EAF5 95.69%);
+  padding: 10px;
+  /* background: linear-gradient(171.38deg, #b4e4fc 3.36%, #E2EAF5 95.69%); */
   box-shadow: 0px 0px 20px rgba(45, 236, 250, 0.3);
   border:2px solid rgb(244, 244, 244);
   width:90%;
@@ -1420,6 +1414,7 @@ width:50vw;
 .media-card {
   width: 25%;
   /* max-width: 400px;s */
+  padding: 10px;
   margin:10px;
   background: white;
   border-radius: 5px;
