@@ -1,5 +1,9 @@
 *.env
+<<<<<<< HEAD
 *.db.sqlite3
 **/__pycache__
 portfolio/migrations*
 portfolio/__pycache__*
+=======
+abcd
+>>>>>>> d18785c7d6865da6c81d6b3a51270ed0f1f17703
