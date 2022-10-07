@@ -8,11 +8,11 @@
 }
 
 body {
-  background-color: #6a9ac4;
+  background-color: rgba(118, 190, 203, 0.68);
 }
 
 #contact {
-  background-color: #6a9ac4;
+  background-color: rgba(118, 190, 203, 0.68);
   display: flex;
   justify-content: center;
   align-items: center;
