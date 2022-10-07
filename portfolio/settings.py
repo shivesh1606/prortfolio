@@ -25,7 +25,7 @@ SECRET_KEY = 'sa5kdjr()kaw24cbmdo2e#%pucnzyvv5l03f=twzk2(m83s9z('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'ivarlabs.azurewebsites.net']
+ALLOWED_HOSTS = ['*','ivarlabs.azurewebsites.net']
 
 
 # Application definition
