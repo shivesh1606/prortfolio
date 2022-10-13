@@ -92,13 +92,17 @@
   <!-- ======= Media ======= -->
     <div id="media" class="media">
       {% for obj in media %}
+
         <div class="media-card">
+          <a  href="{{obj.url}}" target="_blank">
             <img src={{obj.image.url}}/>
+          </a>
             <div class="media-card-text">
               <h2>{{obj.title}}</h2>
               <p>{{obj.description}}</p>
             </div>
         </div>
+
       {%endfor%}
     </div>
   <!-- ======= End Media ======= -->

@@ -101,7 +101,7 @@ def media(request):
     return render(request,'media.html',context)
 
 def awards(request):
-    award=Awards.objects.all()
+    award=Award.objects.all()
     context={
         "obj":award
     }

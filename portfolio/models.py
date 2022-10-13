@@ -68,7 +68,7 @@ class Contact_form(models.Model):
     def __str__(self):
         return self.name + " - " + self.email
 
-class Awards(models.Model):
+class Award(models.Model):
     image=models.FileField(null=True, blank=True)
     title=models.CharField(max_length=3000,null=True, blank=True)
     url=models.CharField(max_length=3000,null=True, blank=True)
@@ -80,6 +80,7 @@ class Media(models.Model):
     image=models.FileField(null=True, blank=True)
     title=models.CharField(max_length=3000,null=True, blank=True)
     description=models.CharField(max_length=3000,null=True, blank=True)
+    url=models.CharField(max_length=3000,null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -121,4 +122,4 @@ class Gallery_Image(models.Model):
     photo = models.FileField(null=True, blank=True)
     about =models.TextField(null=True,blank=True)
     def __str__(self):
-        return self.id
+        return str(self.about).capitalize()
