@@ -182,3 +182,13 @@ def editorial(request):
     }
     return render(request,'editorial.html',context)
 
+
+
+def gallery(request):
+    obj = Gallery_Image.objects.all()
+    
+    context={
+        "projects":obj,
+    }
+    return render(request,'gallery_image.html',context)
+

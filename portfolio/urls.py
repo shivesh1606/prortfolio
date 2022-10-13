@@ -35,4 +35,5 @@ urlpatterns = [
     path('conference/',views.conference,name="conference_page"),
     path('invited/',views.invited,name="invited_page"),
     path('editorial/',views.editorial,name="editorial_page"),
+    path('gallery/',views.gallery,name="gallery_page")
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -114,3 +114,11 @@ class Map_Location(models.Model):
 
     def __str__(self):
         return self.title+" : "+self.lat +" - "+self.lng
+
+
+class Gallery_Image(models.Model):
+    id = models.AutoField(primary_key=True)
+    photo = models.FileField(null=True, blank=True)
+    about =models.TextField(null=True,blank=True)
+    def __str__(self):
+        return self.id

@@ -15,3 +15,5 @@ admin.site.register(Media)
 admin.site.register(Project)
 admin.site.register(Reasearch)
 admin.site.register(Map_Location)
+
+admin.site.register(Gallery_Image)
