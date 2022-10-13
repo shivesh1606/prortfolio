@@ -21,7 +21,11 @@ def get_client_ip(request):
         ip = x_forwarded_for.split(',')[0]
     else:
         ip = request.META.get('REMOTE_ADDR')
+    ip=ip.split(":")
+    ip=ip[0]
+    print(ip)
     return ip
+
 def home (request):
 
     ip_addr=get_client_ip(request)
