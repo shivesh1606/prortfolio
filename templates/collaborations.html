@@ -39,6 +39,7 @@
   <!-- Template Main CSS File -->
   <link href="/static/assets/css/style.css" rel="stylesheet">
   <link href="/static/assets/css/publicationstyle.css" rel="stylesheet">
+  <link href="/static/assets/css/collaboration.css" rel="stylesheet">
 
   <style>
     /* Set the size of the div element that contains the map */
@@ -50,7 +51,7 @@
   }
   #collaborations h3{
     text-align: center;
-    font-family: cursive;
+    font-family: Roboto;
     font-weight: 800;
     margin: 0;
     padding: 20px;
@@ -107,19 +108,46 @@
   
   <div id="collaborations" style="background: #95cde8f5;">
     <h3>OUR COLLABORATIONS</h3>
-    <div class="blog-slider__item swiper-slide">
-      <div class="blog-slider__img">
-        
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
-      </div>
-      <div class="blog-slider__content">
-        <span class="blog-slider__code">26 December 2019</span>
-        <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-        <a href="#" class="blog-slider__button">READ MORE</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+        <table class="table table-image">
+          <thead>
+            <tr>
+              <th scope="col">Sl.No</th>
+              <th scope="col">Image</th>
+              <th scope="col">Name</th>
+              <th scope="col">University</th>
+              <th scope="col">Country</th>
+              <th scope="col">Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Shivesh Chaturvedi</td>
+              <td>IIT Kharagpur</td>
+              <td>India</td>
+              <td><a href="#">Link</a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-5.jpg" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Deepak Verma</td>
+              <td>IIT Bombay</td>
+              <td>India</td>
+              <td><a href="#">Link</a></td>
+            </tr>
+          </tbody>
+        </table>   
+        </div>
       </div>
     </div>
-
   </div>
 
   <!-- ======= End Collaborations ======= -->

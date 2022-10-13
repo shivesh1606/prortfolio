@@ -1,0 +1,23 @@
+.container {
+    padding: 2rem 0rem;
+  }
+  
+  h4 {
+    margin: 2rem 0rem 1rem;
+  }
+  
+  .table-image td, .table-image th {
+    vertical-align: middle;
+  }
+
+  .table-image td a {
+    border: 1px solid rgb(229, 224, 224);
+    padding: 5px;
+    background-color: rgb(183, 180, 180);
+    color: black;
+    border-radius: 10px;
+  }
+
+  .table-image td a:hover {
+    background-color: bisque;
+  }
