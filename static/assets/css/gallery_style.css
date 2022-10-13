@@ -1,8 +1,4 @@
-*
-{
 
-    text-align: center;
-}
 body
 {
     align-items: center;
@@ -161,7 +157,7 @@ img.d-block.w-100
 
     /* margin-top: 10vh; */
 }
-
+/* 
 .site-footer
 {
   background-color:#26272b;
@@ -231,7 +227,7 @@ img.d-block.w-100
   margin-right:0;
   border-radius:100%;
   background-color:#33353d
-}
+} */
 .copyright-text
 {
   margin:0

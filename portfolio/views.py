@@ -21,7 +21,11 @@ def get_client_ip(request):
         ip = x_forwarded_for.split(',')[0]
     else:
         ip = request.META.get('REMOTE_ADDR')
+    ip=ip.split(":")
+    ip=ip[0]
+    print(ip)
     return ip
+
 def home (request):
 
     ip_addr=get_client_ip(request)
@@ -101,7 +105,7 @@ def media(request):
     return render(request,'media.html',context)
 
 def awards(request):
-    award=Awards.objects.all()
+    award=Award.objects.all()
     context={
         "obj":award
     }
@@ -181,4 +185,14 @@ def editorial(request):
         "projects":obj,
     }
     return render(request,'editorial.html',context)
+
+
+
+def gallery(request):
+    obj = Gallery_Image.objects.all()
+    
+    context={
+        "projects":obj,
+    }
+    return render(request,'gallery_image.html',context)
 
