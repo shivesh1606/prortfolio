@@ -102,30 +102,21 @@
   <div id="collaborations" style="background: #95cde8f5;">
     <h3>OUR COLLABORATIONS</h3>
     <div class="flex-container space-between">
+      {%for ob in obj%}
       <div class="col card">
         <div class="img-placeholder">
           <a href="#">
-            <img src="https://images.unsplash.com/photo-1530797195762-6e542a0f1843?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY2MjE&ixlib=rb-1.2.1&q=80">
+            <img src={{ob.photo.url}}>
           </a>
         </div>
         <div>
-          <h3>Priya Rajput</h3>
-          <p><i class="fa-solid fa-user"></i>IIT Kharagpur</p>
-          <p><i class="fa-solid fa-location-dot"></i>INDIA</p>
+          <h3>{{ob.name}}</h3>
+          <p><i class="fa-solid fa-user"></i>{{ob.university}}</p>
+          <p><i class="fa-solid fa-location-dot"></i>{{ob.country}}</p>
         </div>
       </div>
-      <div class="col card">
-        <div class="img-placeholder">
-          <a href="#">
-            <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">
-          </a>
-        </div>
-        <div>
-          <h3>Wafaa</h3>
-          <p><i class="fa-solid fa-user"></i>IIT Bombay</p>
-          <p><i class="fa-solid fa-location-dot"></i>New Zealand</p>
-        </div>
-      </div>
+      {% endfor %}
+
     </div>
     <!-- Gradient Generator: https://coolors.co/gradients
      Tints and Shade Generator: https://maketintsandshades.com/-->

@@ -123,3 +123,14 @@ class Gallery_Image(models.Model):
     about =models.TextField(null=True,blank=True)
     def __str__(self):
         return str(self.about).capitalize()
+
+class Collaboration(models.Model):
+    id = models.AutoField(primary_key=True)
+    photo = models.FileField(null=True, blank=True)
+    name =models.TextField(null=True,blank=True)
+    
+    university =models.TextField(null=True,blank=True)
+    country =models.TextField(null=True,blank=True)
+    
+    def __str__(self):
+        return str(self.name).capitalize()
