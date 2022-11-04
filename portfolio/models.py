@@ -7,7 +7,7 @@ from datetime import timedelta
 from hitcount.models import HitCountMixin, HitCount
 from django.contrib.contenttypes.fields import GenericRelation
 
-categotry = {
+categotry = (
     ('Journal','Journal'),
     ('Book Chapters','Book Chapters'),
     ('Books','Books'),
@@ -15,18 +15,18 @@ categotry = {
     ('Conference','Conference'),
     
 
-}
+)
 
-categotry_reasearch = {
+categotry_reasearch = (
     ('Invited Talks','Invited Talks'),
     ('Editorial Boards','Editorial Boards'),
     ('Conference Presentation','Conference Presentation'),
-}
-categotry_team_member = {
+)
+categotry_team_member = (
     ('Team','Team'),
 ('Alumini','Alumini')
 
-}
+)
 
 class Team(models.Model):
     id = models.AutoField(primary_key=True)
