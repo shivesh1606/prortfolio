@@ -1,8 +1,6 @@
 *.env
 
-**/db.sqlite3
 portfolio/portfolio/__pycache__*
 portfolio/migrations/__pycache__*
-portfolio/migrations*
 
 portfolio/__pycache__*
