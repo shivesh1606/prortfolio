@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static%}
-{% load hitcount_tags %}
 <html lang="en">
 
 <head>
@@ -78,6 +77,8 @@
             <li><a class="nav-link active" href="{%url 'home_page'%}">HOME</a></li>
             <li><a class="nav-link" href="{%url 'team_page'%}">TEAM</a></li>
             <li><a class="nav-link " href="{%url 'equipment_page'%}">EQUIPMENT</a></li>
+            
+          <li><a class="nav-link " href="{%url 'gallery_page'%}">GALLERY</a></li>
             <li class="dropdown"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="{%url 'projects_page'%}">PROJECTS</a></li>
@@ -101,7 +102,7 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero">
       <div class="hero-container">
-        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="heroCarousel" data-bs-interval="2500" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
           <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
@@ -163,7 +164,7 @@
         </div>
       </div>
       <div class="lineundercarousel">
-        <button class="nav-link scrollto" href="#main">Explore</button>
+        <button class="nav-link scrollto" ><a href="#about">Explore</a> </button>
      </div>
     </section><!-- End Hero -->
   </div>
@@ -180,11 +181,7 @@
 
         <h1 class="welcome_message">Welcome to iVAR.</h1>
         <div class="wlcome message">
-          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and
-            I will giveyou a complete account of the system, and expound the actual teachings o
-            f the great explorer of the truth, the master-
-            builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-            because those who do not know how to pursue pleasure rationally encounter consequences
+          <p>{{desc}}
           </p>
         </div>
 
@@ -203,7 +200,7 @@
         </div>
         <div class="profInfo columns">
 
-          <p><a href="http://ww.cetiitkgp.ac.in/prof/3">Prof.Kaushal Kumar Bhagat</a></p>
+          <p>Prof. Kaushal Kumar Bhagat</p>
           <p> Assistant Professor Centre of Educational Technology</p>
           <p> IIT Kharagpur</p>
           <!-- <p><a href="mailto:kkntnu@hotmail.com">kkntnu@hotmail.com</a></p> -->
@@ -230,25 +227,25 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end={{reasearch_count}} data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Research Publication</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end={{publication_count}} data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Conference papers</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end={{bookchapter_count}} data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Book Chapters</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end={{project_count}} data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Research Projects</p>
           </div>
@@ -260,169 +257,6 @@
 
 
 
-    <!-- ======= Portfolio Section ======= 
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Portfolio</span>
-          <h2>Portfolio</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 1"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 3"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 2"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 2"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 2"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 3"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 1"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 3"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="static/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="static/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 3"><i class="ri-add-fill"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="ri-links-fill"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> End Portfolio Section -->
-
 
     <hr>
 
@@ -432,78 +266,22 @@
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
-
+            {% for link in youtube_links%}
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <!-- <img src="static/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
+                <iframe width="500" height="330" src={{link.url}}>
                 </iframe>
 
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 1</a>
+                  <a href="">{{link.title}}</a>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
+            {% endfor %}
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="static/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
-                </iframe>
-
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 2</a>
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="static/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
-                </iframe>
-
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 3</a>
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="static/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
-                </iframe>
-
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 4</a>
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="static/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
-                </iframe>
-
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 5</a>
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
           <div class="swiper-pagination"></div>
         </div>
 

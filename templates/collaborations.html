@@ -38,20 +38,12 @@
 
   <!-- Template Main CSS File -->
   <link href="/static/assets/css/style.css" rel="stylesheet">
-  <link href="/static/assets/css/publicationstyle.css" rel="stylesheet">
+  <link href="/static/assets/css/collaboration.css" rel="stylesheet">
 
   <style>
-    /* Set the size of the div element that contains the map */
-    #map {
-    height: 500px;
-    width: 100%;
-    background-color: gray;
-    border-radius: 5px;
-  }
   #collaborations h3{
     text-align: center;
-    font-family: cursive;
-    font-weight: 800;
+    font-weight: 600;
     margin: 0;
     padding: 20px;
   }
@@ -82,6 +74,8 @@
           <li><a class="nav-link" href="{%url 'home_page'%}">HOME</a></li>
           <li><a class="nav-link" href="{%url 'team_page'%}">TEAM</a></li>
           <li><a class="nav-link" href="{%url 'equipment_page'%}">EQUIPMENT</a></li>
+          
+          <li><a class="nav-link " href="{%url 'gallery_page'%}">GALLERY</a></li>
           <li class="dropdown active"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{%url 'projects_page'%}">PROJECTS</a></li>
@@ -107,8 +101,25 @@
   
   <div id="collaborations" style="background: #95cde8f5;">
     <h3>OUR COLLABORATIONS</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+    <div class="flex-container space-between">
+      {%for ob in obj%}
+      <div class="col card">
+        <div class="img-placeholder">
+          <a href="#">
+            <img src={{ob.photo.url}}>
+          </a>
+        </div>
+        <div>
+          <h3>{{ob.name}}</h3>
+          <p><i class="fa-solid fa-user"></i>{{ob.university}}</p>
+          <p><i class="fa-solid fa-location-dot"></i>{{ob.country}}</p>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+    <!-- Gradient Generator: https://coolors.co/gradients
+     Tints and Shade Generator: https://maketintsandshades.com/-->
   </div>
 
   <!-- ======= End Collaborations ======= -->
@@ -182,64 +193,6 @@
   <!-- Template Main JS File -->
   <script src="/static/assets/js/main.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7OUK3A_NYSc1VhINzaxc_0QE_nUjqFHg&callback=initMap&v=weekly"defer></script>
-  <script>
-    // Initialize and add the map
-    function initMap() {
-
-      var js_list = "{{django_list}}";
-      var myDjangoList = (("{{django_list |safe}}").replace(/&(l|g|quo)t;/g, function(a,b){
-            return {
-                l   : '<',
-                g   : '>',
-                quo : '"'
-            }[b];
-        }));
-      
-          myDjangoList = myDjangoList.replace(/u'/g, '\'')
-          myDjangoList = myDjangoList.replace(/'/g, '\"')
-      
-          myData = JSON.parse( myDjangoList );
-          console.log(myData)
-      
-      // The location of Uluru
-      // const uluru = { lat: -25.344, lng: 131.031 };
-      var location = myData;
-
-    
-      // The map, centered at Uluru
-      var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 2.5,
-        center: location[0][1],
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      });
-      var infowindow = new google.maps.InfoWindow;
-      // // The marker, positioned at Uluru
-      // const marker = new google.maps.Marker({
-      //   position: location,
-      //   map: map,
-      // });
-      var marker, i;
-
-for (i = 0; i < location.length; i++) {  
-    marker = new google.maps.Marker({
-         position: location[i][1],
-         map: map
-    });
-
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-         return function() {
-             infowindow.setContent(location[i][0]);
-             infowindow.open(map, marker);
-         }
-    })(marker, i));
-}
-    }
-
-    window.initMap = initMap;
-    {% comment %} console.log("{{json_obj}}") {% endcomment %}
-  
-   
-  </script>
   <script src="/static/assets/js/publication.js"></script>
 </body>
 </html>

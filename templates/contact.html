@@ -66,6 +66,8 @@
           <li><a class="nav-link" href="{%url 'home_page'%}">HOME</a></li>
           <li><a class="nav-link" href="{%url 'team_page'%}">TEAM</a></li>
           <li><a class="nav-link " href="{%url 'equipment_page'%}">EQUIPMENT</a></li>
+          
+          <li><a class="nav-link " href="{%url 'gallery_page'%}">GALLERY</a></li>
           <li class="dropdown"><a href="#"><span>RESEARCH</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{%url 'projects_page'%}">PROJECTS</a></li>
@@ -89,59 +91,6 @@
 
   <!-- ======= Contact Us ======= -->
   
-    {% comment %} <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="contact-form">
-                <h1>Contact Us</h1>
-                <p class="hint-text">We'd love to hear from you, please drop us a line if you've any query or question.</p>       
-                <form action="{% url 'contact_page' %}" method="POST">
-                  {% csrf_token %} 
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="inputName">Name</label>
-                                <input type="text" class="form-control" id="inputName" name="name" required>
-                            </div>
-                        </div>                
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="inputEmail">E-mail</label>
-                                <input name="email" type="email" class="form-control" id="inputEmail" placeholder="email@example.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-4">
-                          <label for="inputStat">Subject</label>
-                          <select id="inputState" name="subject" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>Internship</option>
-                            <option>Collaboration</option>
-                            <option>Ph.D position</option>
-                            <option>Post-Doctoral position</option>
-                          </select>
-                        </div>
-                    </div>            
-                    <div class="form-group">
-                        <label for="inputSubject">Affilation</label>
-                        <input type="text" name= "affilation" class="form-control" id="inputSubject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputMessage">Message</label>
-                        <textarea class="form-control" name="message" id="inputMessage" rows="5" required></textarea>
-                    </div>
-                    <br>
-                    {% if msg%}
-                    <div class="alert alert-primary" role="alert">
-                     {{msg}}
-                    </div>
-                    {%endif%}
-                    <br>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>   -->
-   {% endcomment %}
   <section id="contact">
     <div class="contact-box">
       <div class="contact-links">
@@ -175,7 +124,7 @@
           <div class="form-item">
             <label></label>
             <select class="" name="subject" required>
-              <option></option>
+              <option style="color: #999; !important">Subject</option>
               <option>Internship</option>
               <option>Collaboration</option>
               <option>Ph.D position</option>
