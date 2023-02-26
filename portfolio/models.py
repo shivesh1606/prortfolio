@@ -4,7 +4,6 @@ from django.contrib.auth.models import AbstractUser
 import uuid
 from django.utils import timezone
 from datetime import timedelta
-from hitcount.models import HitCountMixin, HitCount
 from django.contrib.contenttypes.fields import GenericRelation
 
 categotry = (
@@ -27,7 +26,11 @@ categotry_team_member = (
 ('Alumini','Alumini')
 
 )
+categotry_image = (
+    ('Publication','Publication'),
+('Gallery','Gallery')
 
+)
 class Team(models.Model):
     id = models.AutoField(primary_key=True)
     name=models.CharField(max_length=250, null=True,blank=True)
@@ -47,10 +50,6 @@ class Publication(models.Model):
         return self.category +" - "+self.info
     
 
-class View_count(models.Model):
-    count=models.IntegerField(default=0)
-    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
-    related_query_name='hit_count_generic_relation')
 
 class IpModel(models.Model):
     ip=models.CharField(max_length=100)
@@ -106,23 +105,18 @@ class Reasearch(models.Model):
         return self.category +" - "+self.info
 
 
-class Map_Location(models.Model):
-    id = models.AutoField(primary_key=True)
-    title=models.CharField(max_length=600)
-    lat=models.CharField(max_length=60)
-    lng=models.CharField(max_length=60)
-
-
-    def __str__(self):
-        return self.title+" : "+self.lat +" - "+self.lng
 
 
 class Gallery_Image(models.Model):
     id = models.AutoField(primary_key=True)
+    image_Category=models.CharField(max_length=60, choices=categotry_image ,default='Gallery')
+
     photo = models.FileField(null=True, blank=True)
     about =models.TextField(null=True,blank=True)
     def __str__(self):
         return str(self.about).capitalize()
+    class Meta:
+      verbose_name = "Images" # add verbose_name  here
 
 class Collaboration(models.Model):
     id = models.AutoField(primary_key=True)
@@ -134,3 +128,18 @@ class Collaboration(models.Model):
     
     def __str__(self):
         return str(self.name).capitalize()
+
+
+class HomePage(models.Model):
+    id = models.AutoField(primary_key=True)
+    desc=models.TextField(null=True,blank=True)
+
+    def __str__(self):
+        return str(self.id).capitalize()
+
+class Youtube_Link(models.Model):
+    id = models.AutoField(primary_key=True)
+    url=models.CharField(max_length=3000,null=True, blank=True)
+    title=models.CharField(max_length=3000,null=True, blank=True)
+    def __str__(self):
+        return str(self.title).capitalize()

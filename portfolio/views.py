@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from .models import *
-from hitcount.views import HitCountDetailView
 
 from .forms import ContactFormSubmission
 import json
@@ -43,10 +42,21 @@ def home (request):
     #         associated_contacts.append(Publication.associated_contact.all()[0])
         
     # print(associated_contacts)
-
+    youtube_links=Youtube_Link.objects.all()
     
+    try:
+        desc=HomePage.objects.all()
+        desc=desc[0].desc
+    except Exception as e:
+        desc=''
     context={
         "count" : IpModel.objects.all().count,
+        "youtube_links":youtube_links,
+        'desc':desc,
+        'publication_count':Publication.objects.all().count,
+        'reasearch_count':Reasearch.objects.all().count,
+        'project_count':int(str(Project.objects.all().count()))+int(str(Collaboration.objects.all().count())),
+        'bookchapter_count':Publication.objects.filter(category='Book Chapters').count,
         # "Publications":obj,
 
     }
@@ -94,8 +104,10 @@ def contact(request):
     return render(request,'contact.html')
 
 def equipment(request):
-
-    return render(request,'gallery.html')
+    context={
+                "images" : Gallery_Image.objects.filter(image_Category='Publication')
+            }
+    return render(request,'gallery.html',context)
 
 def media(request):
     obj=Media.objects.all()
@@ -192,7 +204,7 @@ def editorial(request):
 
 
 def gallery(request):
-    obj = Gallery_Image.objects.all()
+    obj = Gallery_Image.objects.filter(image_Category='Gallery')
     
     context={
         "projects":obj,

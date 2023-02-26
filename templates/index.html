@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static%}
-{% load hitcount_tags %}
 <html lang="en">
 
 <head>
@@ -182,11 +181,7 @@
 
         <h1 class="welcome_message">Welcome to iVAR.</h1>
         <div class="wlcome message">
-          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and
-            I will giveyou a complete account of the system, and expound the actual teachings o
-            f the great explorer of the truth, the master-
-            builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-            because those who do not know how to pursue pleasure rationally encounter consequences
+          <p>{{desc}}
           </p>
         </div>
 
@@ -205,7 +200,7 @@
         </div>
         <div class="profInfo columns">
 
-          <p><a href="http://ww.cetiitkgp.ac.in/prof/3">Prof. Kaushal Kumar Bhagat</a></p>
+          <p>Prof. Kaushal Kumar Bhagat</p>
           <p> Assistant Professor Centre of Educational Technology</p>
           <p> IIT Kharagpur</p>
           <!-- <p><a href="mailto:kkntnu@hotmail.com">kkntnu@hotmail.com</a></p> -->
@@ -232,25 +227,25 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end={{reasearch_count}} data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Research Publication</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end={{publication_count}} data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Conference papers</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end={{bookchapter_count}} data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Book Chapters</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end={{project_count}} data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Research Projects</p>
           </div>
@@ -271,78 +266,22 @@
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
-
+            {% for link in youtube_links%}
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <!-- <img src="static/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
+                <iframe width="500" height="330" src={{link.url}}>
                 </iframe>
 
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 1</a>
+                  <a href="">{{link.title}}</a>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
+            {% endfor %}
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="static/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
-                </iframe>
-
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 2</a>
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="static/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
-                </iframe>
-
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 3</a>
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="static/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
-                </iframe>
-
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 4</a>
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="static/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
-                <iframe width="500" height="330" src="https://www.youtube.com/embed/LXb3EKWsInQ">
-                </iframe>
-
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  <a href="">Video 5</a>
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
           <div class="swiper-pagination"></div>
         </div>
 
