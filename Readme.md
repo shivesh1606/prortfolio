@@ -1,4 +1,4 @@
-# The Golden Bank sample application
+# Team 55 sample application
 
 ## Seting up the Core backend repo
 
